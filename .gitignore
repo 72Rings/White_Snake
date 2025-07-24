@@ -1,0 +1,7 @@
+__pycache__/
+*.log
+.env
+.vscode/
+node_modules/
+.DS_Store
+
