@@ -3,29 +3,42 @@ import java.util.List;
 
 public class DeckBuilder {
 
+    public static class DeckConfig {
+        public int memberCount = 100;
+        public int nobleCount = 10;
+        public int governorCount = 7;
+        public int emperorCount = 4;
+        public int whiteSnakeCount = 5;
+        public int theyCount = 2;
+        public int davisCount = 1;
+    }
+
     private DeckBuilder() {
         // Utility class
     }
 
-    public static List<Card> buildDeck() {
+    public static List<Card> buildDeck(DeckConfig config) {
         List<Card> deck = new ArrayList<>();
 
-        addCards(deck, "Member", 13);
-        addCards(deck, "Noble", 10);
-        addCards(deck, "Governor", 7);
-        addCards(deck, "Emperor", 4);
-        addCards(deck, "White Snake", 5);
+        addCards(deck, "Member", config.memberCount, 1);
+        addCards(deck, "Noble", config.nobleCount, 1);
+        addCards(deck, "Governor", config.governorCount, 1);
+        addCards(deck, "Emperor", config.emperorCount, 1);
+        addCards(deck, "White Snake", config.whiteSnakeCount, 1);
 
-        deck.add(new Card("They", 9));
-        deck.add(new Card("They", 10));
-        deck.add(new Card("The Davis", Card.INFINITY));
+        addCards(deck, "They", config.theyCount, 9);
+
+        for (int i = 0; i < config.davisCount; i++) {
+            deck.add(new Card("The Davis", Card.INFINITY));
+        }
 
         return deck;
     }
 
-    private static void addCards(List<Card> deck, String type, int maxNumber) {
-        for (int i = 1; i <= maxNumber; i++) {
-            deck.add(new Card(type, i));
+    // startNumber lets you control the starting number for "They" cards
+    private static void addCards(List<Card> deck, String type, int count, int startNumber) {
+        for (int i = 0; i < count; i++) {
+            deck.add(new Card(type, startNumber + i));
         }
     }
 }
