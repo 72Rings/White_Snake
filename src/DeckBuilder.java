@@ -4,7 +4,7 @@ import java.util.List;
 public class DeckBuilder {
 
     public static class DeckConfig {
-        public int memberCount = 100;
+        public int memberCount = 13;
         public int nobleCount = 10;
         public int governorCount = 7;
         public int emperorCount = 4;
