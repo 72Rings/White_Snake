@@ -1,0 +1,242 @@
+# 🐍 White Snake – Full Rulebook
+
+## 📌 Game Overview
+
+**White Snake** is a strategic, multi-round card game for 2–5 players. Players bet chips on each round while building the most valuable hand using numbered cards, card types, wild cards, and score multipliers. Hands are scored after 5 cards are drawn, and the player with the best hand wins the pot. The game continues until one player has all the chips, or a round limit is reached.
+
+---
+
+## 👥 Players
+
+- **2 to 5 players**
+- Each player starts with **50 chips** (can be adjusted if all players agree)
+- The objective is to win **all chips** or have the most after a set number of rounds
+
+---
+
+## 🃏 Deck Composition
+
+The deck consists of uniquely numbered cards across several types. Each type contains a distinct range of numbers — no duplicate numbers within a type.
+
+| Card Type      | Quantity | Number(s)       | Notes                                 |
+|----------------|-----------|------------------|----------------------------------------|
+| Member         | 13        | 1–13              | Basic cards                            |
+| Noble          | 10        | 1–10              | Slightly stronger                      |
+| Governor       | 7         | 1–7               | Higher value range                     |
+| Emperor        | 4         | 1–4               | Most valuable base scoring cards       |
+| They           | 2         | 9, 10             | Double (×2) or Quadruple (×4) multiplier cards |
+| White Snake    | 5         | 1–5               | Wild cards that also trigger passing   |
+| The Davis      | 1         | ∞ (Infinity)      | Always passed, causes round loss       |
+
+> All players keep their cards **hidden** from each other. Each card has a **type** and a **number**, and those properties affect scoring.
+
+---
+
+## 🔁 Round Structure
+
+Each round follows these phases:
+
+### 1. **Initial Deal**
+- Each player is dealt **2 hidden cards**
+- Players **declare any White Snake cards** they hold
+- For each White Snake declared, every player **passes their highest-numbered card** to the left
+
+### 2. **Betting Phase**
+- Starting left of the dealer:
+  - Players may **Bet**, **Call**, **Raise**, or **Fold**
+- Betting continues until all active players match the highest bet or fold
+
+### 3. **Draw and Repeat (×3)**
+- Repeat 3 times:
+  - Each player draws one new card (now 3 → 4 → 5 cards total)
+  - Declare and resolve White Snake passing again
+  - **Another betting phase** after each draw, except after the final one
+
+### 4. **Final Phase**
+- No betting after the final draw
+- All hands are revealed and **scored**
+- Player with **highest score** wins the pot, unless they hold **The Davis** (∞), in which case they automatically lose the round
+
+---
+
+## 🌀 White Snake Rules
+
+- Each **unique White Snake (1–5) drawn or revealed during the current turn** triggers **one pass event**
+- Only White Snakes **drawn or revealed on that turn** cause passing; White Snakes already held from previous turns do **not** trigger additional pass events
+- **During passing**, all players simultaneously give their highest-numbered card to the player on their left
+  - Players **choose** which card to pass if there’s a tie in their hand
+  - **The Davis** must always be passed (∞ is highest)
+
+- At scoring time:
+  - Each White Snake must be **assigned a valid card type** (e.g. Noble, Emperor, Member, etc.)
+  - It **cannot** be The Davis or a They card
+  - It **must** be used as a type — it cannot score on its own
+  - **Players should assign White Snakes to the card type that gives them the highest possible score** (optimal assignment is recommended)
+
+---
+
+## 🧠 Scoring System
+
+Scoring is based on three systems: card types, matching numbers, and bonus rules.
+
+### A. Scoring by Card Type
+
+Each type uses a **doubling scale** depending on how many cards you have of that type.  
+(White Snakes count toward the type they are assigned to.)
+
+#### Members
+| Count | Points |
+|-------|--------|
+| 1     | 0      |
+| 2     | 1      |
+| 3     | 2      |
+| 4     | 4      |
+| 5     | 8      |
+
+#### Nobles
+- 1 = 0  
+- 2 = 2  
+- 3 = 4  
+- 4 = 8  
+- 5 = 16  
+
+#### Governors
+- 1 = 0  
+- 2 = 3  
+- 3 = 6  
+- 4 = 12  
+- 5 = 24  
+
+#### Emperors
+- 1 = 1  
+- 2 = 4  
+- 3 = 8  
+- 4 = 16  
+- 5 = 32 (*Only possible using White Snake(s) as Emperors*)
+
+---
+
+### B. Matching Number Bonus
+
+If you have cards with the **same number** (regardless of type), score bonus points:
+
+| Matches | Points |
+|---------|--------|
+| 1       | 0      |
+| 2       | 1      |
+| 3       | 3      |
+| 4       | 6      |
+| 5       | 12     |
+
+---
+
+### C. Full House Bonus
+
+- If you have **3 cards of one type** and **2 cards of another**, score **+1 point**
+
+---
+
+### D. They Cards
+
+- 1 They card = ×2 multiplier on final score  
+- 2 They cards = ×4 multiplier  
+- White Snakes **cannot** be used as They cards
+
+---
+
+### E. The Davis (♾️)
+
+- The Davis must be passed whenever passing occurs
+- If a player ends the round **holding The Davis**, they:
+  - **Score 0 points**
+  - **Cannot win the round**
+  - Are **excluded from taking the pot**
+
+---
+
+## 💰 Betting & Folding Rules
+
+- Players can **go all-in** at any time and as many times as they want
+- Players may **fold** up to **2 rounds in a row**
+  - If they **fold 3 rounds in a row**, they are **eliminated from the game**
+  - Their remaining chips are added to the **current round’s pot**
+
+---
+
+## 💰 Side Pot (Subpot) Rules
+
+- If players have different chip amounts and go all-in, the round may create multiple pots ("side pots").
+- Each pot is formed by the maximum amount that all remaining players can match.
+- Players who go all-in with fewer chips than others can only win the pots they contributed to.
+- When betting exceeds a player's chip count, that player is "all-in" and cannot match further raises.
+- At the end of the round, hands are ranked. The best hand among eligible players wins each pot in order (from smallest to largest).
+
+### Example
+
+Suppose four players bet as follows:
+- **Player 1:** 50 chips (bets 50)
+- **Player 2:** 50 chips (bets 50)
+- **Player 3:** 30 chips (bets 30, all-in)
+- **Player 4:** 15 chips (bets 15, all-in)
+
+**Pot breakdown:**
+- **Pot 1:** 15 chips from each player = 60 chips (all players eligible)
+- **Pot 2:** 15 more chips from players 1, 2, 3 = 45 chips (players 1, 2, 3 eligible)
+- **Pot 3:** 20 more chips from players 1 and 2 = 40 chips (players 1, 2 eligible)
+
+**Distribution:**
+- The best hand among all players wins Pot 1.
+- The best hand among players 1, 2, 3 (excluding anyone who already won Pot 1) wins Pot 2.
+- The best hand among players 1 and 2 (excluding previous winners) wins Pot 3.
+
+This ensures fairness when players have different chip stacks and allows all-in players to compete for the portion of the pot they matched.
+
+---
+
+## 🏁 End of Game
+
+- The game ends when:
+  - One player holds **all the chips**, or
+  - A **round limit** is reached (decided before play starts)
+- In a round-limit game, the winner is the player with the **most chips**
+
+---
+
+## 🧪 Gameplay Example 1: Basic Round
+
+1. Players are dealt 2 cards each  
+2. A player declares White Snake (1) → all players pass their highest card  
+3. First betting round begins  
+4. Players draw third card → one more White Snake revealed  
+5. Second pass and second betting round  
+6. Repeat draw + bet until 5 cards  
+7. Final hands revealed:
+   - Player A: 3 Governors (3, 5, 6), 2 Nobles (1, 3)
+     - Governors = 6 pts, Nobles = 2 pts, Full House = 1 pts, two cards with matching number 3 += 1 point → Total = 10 pts
+   - Player B: 2 Emperors (2, 4), White Snake (2) (assigned as Emperor), 2 Members (4, 6)
+     - Emperors = 8 pts, Members = 1 pt, Full House = 1, three matching numbers bonus +=2 points → Total = 12 pts  
+   → Player B wins the pot
+
+---
+
+## 🧪 Gameplay Example 2: They Card and The Davis
+
+- Player C ends with:
+  - White Snake (1) (assigned as Emperor), Emperor (2), Member (2), They (10), The Davis
+  - Matching number (2s) = +1
+  - 2 Emperors (incl. Snake) = 4 pts
+  - They card = x2 
+  - BUT they hold The Davis → they **score 0 and lose the round**
+
+
+## 🧪 Gameplay Example 2: tie
+
+if at the end of the game players have a tie for the highest score. They must then tie break. The player that has a card with the highest number value wins, if both/all of the players have the same highest number, then they go to has the highest number among the second highest numbers of their individual cards. so if 3 players tie, they would look at their cards. all of their highest numbers are 9 
+
+player one has the THEY (9)
+player 2 has the member (9)
+player 3 has the noble (9)
+
+they must then turn to each of their second highest and compare. 
+
+payer one has a member 8
