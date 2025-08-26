@@ -20,7 +20,8 @@ public class Card {
     @Override
     public String toString() {
         if (number == INFINITY) {
-            return type + " \u221E"; // Infinity symbol
+            return type + " \u221E"; // Infinity symbol heyoooo
+    
         }
         return type + " " + number;
     }
