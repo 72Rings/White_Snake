@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Game {
     private List<Player> players;
@@ -18,13 +19,18 @@ public class Game {
 
     public void start() {
         System.out.println("Starting White Snake game!");
-        while (!isGameOver()) {
-            System.out.println("\n--- Round " + roundNumber + " ---");
-            Round round = new Round(players, deck, 0); // Pot is now managed by Round
-            round.play();
-            // TODO: After round, distribute chips from pots to winners
-            // TODO: Announce round winner(s)
-            roundNumber++;
+        Scanner scanner = new Scanner(System.in);
+        try {
+            while (!isGameOver()) {
+                System.out.println("\n--- Round " + roundNumber + " ---");
+                Round round = new Round(players, deck, 0); // Pot is now managed by Round
+                round.play(scanner); // pass single scanner into round
+                // TODO: After round, distribute chips from pots to winners
+                // TODO: Announce round winner(s)
+                roundNumber++;
+            }
+        } finally {
+            scanner.close();
         }
         System.out.println("Game over!");
         // TODO: Announce overall winner(s)
